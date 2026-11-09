@@ -45,7 +45,7 @@
         <!-- ==========================================
              2. SECCIÓN: BOTÓN CTA (Formulario de Acceso al Inicio)
              ========================================== -->
-        <section id="cta" class="mj-cta-section">
+        <section id="cta" class="mj-cta-section animate-fade-in">
             <div class="mj-container mj-cta-grid">
                 <div class="mj-cta-text">
                     <h2>Obtén Acceso Exclusivo</h2>
@@ -146,11 +146,11 @@
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     statusMessage.textContent = '¡Enlace enviado con éxito! Revisa tu bandeja de entrada.';
-                    statusMessage.style.color = '#2e7d32';
+                    statusMessage.style.color = '#4ade80'; /* Color verde brillante para mayor contraste */
                     document.getElementById('download-form').reset();
                 }, (error) => {
                     statusMessage.textContent = 'Ocurrió un error al enviar. Por favor, inténtalo de nuevo.';
-                    statusMessage.style.color = '#c62828';
+                    statusMessage.style.color = '#f87171'; /* Color rojo brillante */
                     console.error('FALLÓ EL ENVÍO:', error);
                 })
                 .finally(() => {
