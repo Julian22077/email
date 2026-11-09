@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ App - Acceso Institucional</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- SDK de EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "DbNFMI8aqXmtG0Zav",
+          });
+       })();
+    </script>
+</head>
+<body class="mj-corporate-body">
+
+    <!-- ==========================================
+         1. SECCIÓN: LOGO (Header de Navegación)
+         ========================================== -->
+    <header class="mj-header">
+        <div class="mj-container mj-header__inner">
+            <a href="#" class="brand">
+                <img src="https://identidad-de-marca-delta.vercel.app/assets/LogoMJ.png" alt="Logo MJ App" class="brand__mark">
+                <span>MJ App Enterprise</span>
+            </a>
+            <nav class="mj-header__nav">
+                <a href="#cta">Acceso</a>
+                <a href="#saludo">Inicio</a>
+                <a href="#contenido">Legado</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Video y Superposición de Fondo que abarcan todo el contenido central -->
+        <video class="mj-hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="assets/video.mp4" type="video/mp4">
+        </video>
+        <div class="mj-hero-overlay" aria-hidden="true"></div>
+
+        <!-- ==========================================
+             2. SECCIÓN: BOTÓN CTA (Formulario de Acceso al Inicio)
+             ========================================== -->
+        <section id="cta" class="mj-cta-section">
+            <div class="mj-container mj-cta-grid">
+                <div class="mj-cta-text">
+                    <h2>Obtén Acceso Exclusivo</h2>
+                    <p>Recibe el enlace directo de descarga para iOS y Android de manera segura. Sin suscripciones ocultas ni cargos recurrentes.</p>
+                </div>
+                <div class="mj-form-card">
+                    <form class="download-form" id="download-form">
+                        <div class="field">
+                            <label for="corporate-email">Correo electrónico</label>
+                            <div class="input-wrapper">
+                                <svg class="input-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <input type="email" id="corporate-email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                            </div>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn--primary btn--full">Solicitar Enlace de Descarga</button>
+                        <p id="status-message" class="form-note" style="margin-top: 12px; font-weight: 600;"></p>
+                        <p class="form-note">Acceso libre y permanente para usuarios registrados.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             3. SECCIÓN: SALUDO
+             ========================================== -->
+        <section id="saludo" class="mj-saludo">
+            <div class="mj-container mj-saludo__inner">
+                <span class="mj-eyebrow">Plataforma Gamificada Oficial</span>
+                <h1>El Legado del Rey del Pop en Tus Manos</h1>
+                <p>Bienvenido a la experiencia digital interactiva diseñada para explorar la historia, las eras musicales y coreografías de Michael Jackson con rigurosidad técnica y rendimiento móvil superior.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             4. SECCIÓN: CONTENIDO (Galería Visual)
+             ========================================== -->
+        <section id="contenido" class="mj-contenido">
+            <div class="mj-container">
+                <div class="mj-section-header">
+                    <h2>Evolución Artística e Interactiva</h2>
+                    <p>Descubre los hitos visuales y los componentes multimedia optimizados para la plataforma.</p>
+                </div>
+                <div class="mj-gallery-grid">
+                    <article class="mj-gallery-card">
+                        <img src="assets/michael.jpg" alt="Michael Jackson Estilo Clásico" loading="lazy">
+                        <div class="mj-gallery-info">
+                            <h3>Era Thriller y Billie Jean</h3>
+                            <p>Análisis interactivo de coreografías icónicas y momentos históricos en presentaciones en vivo.</p>
+                        </div>
+                    </article>
+                    <article class="mj-gallery-card">
+                        <img src="assets/michael2.jpg" alt="Michael Jackson Retrato Institucional" loading="lazy">
+                        <div class="mj-gallery-info">
+                            <h3>Precisión Escénica</h3>
+                            <p>Simulador de decisiones basado en los retos artísticos del artista.</p>
+                        </div>
+                    </article>
+                    <article class="mj-gallery-card">
+                        <img src="assets/michael3.jpg" alt="Michael Jackson Vestuario Icónico" loading="lazy">
+                        <div class="mj-gallery-info">
+                            <h3>Eras Musicales</h3>
+                            <p>Un recorrido cronológico estructurado para explorar cada etapa de su carrera.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         5. SECCIÓN: FOOTER (Pie de Página)
+         ========================================== -->
+    <footer class="mj-footer">
+        <div class="mj-container mj-footer__inner">
+            <span>MJ App © 2026 — The Living Legacy Gamified Platform</span>
+            <span>Plataforma de fans no oficial. Diseñada bajo estándares profesionales.</span>
+        </div>
+    </footer>
+
+    <!-- Script de EmailJS -->
+    <script>
+        document.getElementById('download-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const statusMessage = document.getElementById('status-message');
+            
+            submitBtn.textContent = 'Enviando enlace...';
+            submitBtn.disabled = true;
+            statusMessage.textContent = '';
+
+            const serviceID = 'service_1s2vccg';
+            const templateID = 'template_rbe31yg';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    statusMessage.textContent = '¡Enlace enviado con éxito! Revisa tu bandeja de entrada.';
+                    statusMessage.style.color = '#2e7d32';
+                    document.getElementById('download-form').reset();
+                }, (error) => {
+                    statusMessage.textContent = 'Ocurrió un error al enviar. Por favor, inténtalo de nuevo.';
+                    statusMessage.style.color = '#c62828';
+                    console.error('FALLÓ EL ENVÍO:', error);
+                })
+                .finally(() => {
+                    submitBtn.textContent = 'Solicitar Enlace de Descarga';
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+
+</body>
+</html>
